@@ -1,0 +1,29 @@
+try{
+						String ticket="Ticket_Details_";
+						ticket=ticket.concat(movie+".txt");
+				FileWriter f1=new FileWriter(ticket);
+			//	f1.write("User :"+user);
+				f1.write("Theatre :"+theatre+"\n");
+				f1.write("Movie :"+movie+"\n");
+				f1.write("Screen No.:"+screen+"\n");
+				f1.write("No. of Seats:"+total_seats+"\n");
+				f1.write("Total Cost :"+totalprice+"\n");
+				f1.write("Seat No.:"+seatno+"\n");
+
+				f1.close();
+				JOptionPane.showMessageDialog(this,"File Successfully Downloaded.Please Check current Folder");
+				}
+				catch(Exception ex){
+
+				System.out.println("Exception :"+ex.getMessage());
+				}
+
+ PDDocument document = new PDDocument();    
+       
+      //Saving the document
+      document.save("C:/PdfBox_Examples/my_doc.pdf");
+         
+      System.out.println("PDF created");  
+    
+      //Closing the document  
+      document.close();
